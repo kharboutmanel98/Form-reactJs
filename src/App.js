@@ -1,15 +1,11 @@
 
 import './App.css';
-import Form from './Form';
+import LoanForm from './LoanForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <div style={{ backgroundColor: 'navy', padding: '20px' , height: '580px', width:'1200px', borderRadius: '20px'}}>
-      <Form />
-      </div>
-      </header>
+    <div className="App" style={{marginTop:"250px"}}>
+      <LoanForm />
     </div>
   );
 }
