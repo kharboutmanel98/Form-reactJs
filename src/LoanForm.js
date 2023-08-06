@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./FormStyle.css"
-// import Modal from './Modal'
+import Modal from './Modal'
 
 const LoanForm = () => {
     const [loanInputs, setLoanInputs] = useState({
@@ -11,15 +11,21 @@ const LoanForm = () => {
       salaryRange: ""
     });
 
+    const [modalVisible, setModalVisible] = useState(false);
+
     function handleSubmit(event){
       event.preventDefault();
-      alert("hello") 
+      setModalVisible(true);
+      
+      
+    
+      
     }
 
     const btnIsDisabled =
-    loanInputs.name == "" ||
-    loanInputs.age == "" ||
-    loanInputs.phoneNumber == "";
+    loanInputs.name === "" ||
+    loanInputs.age === "" ||
+    loanInputs.phoneNumber === "";
 
     
 
@@ -55,9 +61,11 @@ const LoanForm = () => {
            disabled={
             btnIsDisabled
             }
+            
          >
          Submit
          </button>
+         {modalVisible && <Modal />}
         
       </form>
       {/* <Modal  /> */}
