@@ -65,3 +65,6 @@ hr{
     width: 90%;
     color: green;
 }
+.disabled{
+    background: gray!important;
+}
